@@ -95,7 +95,7 @@ check_by_test() {
 check_by_assert() {
     script_error_fns=()
 
-    teststring="Tests:"
+    teststring="Totals"
     script_error="SCRIPT ERROR"
 
     test_set=0
@@ -126,8 +126,8 @@ check_by_assert() {
             fails=$(echo $temp | awk '{print $3}')
             FAILED=$((FAILED + fails))
             TESTS=$((TESTS + FAILED + passes))
-            echo "total failed asserts $FAILED"
-            echo "total asserts $TESTS"
+            echo "total failed tests $FAILED"
+            echo "total tests $TESTS"
             echo
             echo
             break
